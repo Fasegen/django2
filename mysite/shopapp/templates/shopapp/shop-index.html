@@ -1,0 +1,22 @@
+{% extends 'shopapp/base.html' %}
+
+{% block title %}
+    Shop index
+{% endblock %}
+
+{% block body %}
+    <div>
+        Time running: {{ timer }}
+    </div>
+    <span>
+        {% for book in books %}
+            <ul>
+                <li> {{ book.title }} {{ book.author.name }}</li>
+            </ul>
+
+        {% endfor %}
+    </span>
+    <div>
+        {% lorem 3 p random %}
+    </div>
+{% endblock %}
